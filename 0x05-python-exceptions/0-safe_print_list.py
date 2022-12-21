@@ -2,9 +2,9 @@
 def safe_print_list(my_list=[], x=0):
     num = 0
 
-    for index in range(0, x):
+    for index in range(x):
         try:
-            print("{}".formart(my_list[index]), end='')
+            print(my_list[index], end='')
             num += 1
         except IndexError:
             pass
