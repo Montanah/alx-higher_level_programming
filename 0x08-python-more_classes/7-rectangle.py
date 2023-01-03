@@ -3,7 +3,8 @@
 
 
 class Rectangle:
-    ''' rectangle class with width, height, area, and perimeter '''
+    ''' rectangle class with width, height, area, and perimeter, string, repr,
+        del message, instance counter, print symbol'''
     number_of_instances = 0
 
     print_symbol = '#'
