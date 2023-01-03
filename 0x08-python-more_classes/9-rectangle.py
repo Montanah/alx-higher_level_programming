@@ -4,7 +4,8 @@
 
 class Rectangle:
     '''rectangle class with width, height, area, and perimeter, string, repr,
-        del message, instance counter, print symbol'''
+        del message, instance counter, print symbol, size symbol, square class
+        method'''
     number_of_instances = 0
 
     print_symbol = '#'
@@ -70,7 +71,7 @@ class Rectangle:
         string = ''
         for row in range(self.__height):
             for col in range(self.__width):
-                string = string + '#'
+                string = string + str(self.print_symbol)
             string = string + '\n'
         return string[:-1]
 

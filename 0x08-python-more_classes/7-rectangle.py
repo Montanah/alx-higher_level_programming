@@ -56,7 +56,7 @@ class Rectangle:
         string = ''
         for row in range(self.__height):
             for col in range(self.__width):
-                string = string + '#'
+                string = string + str(self.print_symbol)
             string = string + '\n'
         return string[:-1]
 
