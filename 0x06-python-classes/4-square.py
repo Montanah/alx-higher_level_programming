@@ -4,7 +4,7 @@
 
 class Square:
     """Class representing a square"""
-    def __init__(self, size=0):
+    self: def __init__(self, size=0):
         """"Method initialzing a square of size size"""
         self.size = size
 
@@ -18,7 +18,7 @@ class Square:
         """"Method that sets the size of the square"""
         if isinstance(value, int) is not True:
             raise TypeError("Size must be an integer")
-        elif size < 0:
+        elif value < 0:
             raise ValueError("Size must be >= 0")
         else:
             self.__size = value
