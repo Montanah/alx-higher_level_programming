@@ -40,7 +40,7 @@ class Rectangle:
         if isinstance(value, int) is not True:
             raise TypeError('height must be integer')
         if value < 0:
-            raise ValueErroe('height must be >= 0')
+            raise ValueError('height must be >= 0')
         self.__height = value
 
     @staticmethod
