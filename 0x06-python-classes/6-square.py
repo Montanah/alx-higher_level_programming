@@ -4,9 +4,10 @@
 
 class Square:
     """Class representing a square"""
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """Method initialzing a square of size size"""
         self.size = size
+        self.position = position
 
     @property
     def size(self):
