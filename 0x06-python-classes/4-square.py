@@ -4,8 +4,8 @@
 
 class Square:
     """Class representing a square"""
-    self: def __init__(self, size=0):
-        """"Method initialzing a square of size size"""
+    def __init__(self, size=0):
+        """Method initialzing a square of size size"""
         self.size = size
 
     @property
@@ -15,7 +15,7 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """"Method that sets the size of the square"""
+        """Method that sets the size of the square"""
         if isinstance(value, int) is not True:
             raise TypeError("Size must be an integer")
         elif value < 0:
