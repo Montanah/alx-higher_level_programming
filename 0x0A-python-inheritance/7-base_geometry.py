@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""""Module contaning an empty class"""
+"""Module contaning a class"""
 
 
 class BaseGeometry:
-    """A class contaning two fucntions"""
+    """A class contaning two functions"""
 
     def integer_validator(self, name, value):
         """Funcion that validates value"""
