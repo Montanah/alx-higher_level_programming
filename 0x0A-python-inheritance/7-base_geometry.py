@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""Module contaning a class"""
+"""Module containing a class that can raise an exception and validate a
+ value"""
 
 
 class BaseGeometry:
-    """A class contaning two functions"""
+    """A class that can raise an exception and validate a value"""
 
     def integer_validator(self, name, value):
         """Function that validates value"""
@@ -13,5 +14,5 @@ class BaseGeometry:
             raise ValueError("{} must be greater than 0".format(name))
 
     def area(self):
-        """Ä function that raises an exception"""
+        """A function that raises an exception"""
         raise Exception("area() is not implemented")
