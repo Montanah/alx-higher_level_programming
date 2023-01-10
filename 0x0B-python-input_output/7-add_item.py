@@ -12,7 +12,7 @@ def main(argv):
     """adds items to list in json file"""
     try:
         my_obj = load_from_json_file("add_item.json")
-    except:
+    except Exception:
         my_obj = []
 
     if type(my_obj) is not list:
@@ -20,5 +20,6 @@ def main(argv):
     for item in argv[1:]:
         my_obj.append(item)
     save_to_json_file(my_obj, "add_item.json")
+
 
 main(sys.argv)
