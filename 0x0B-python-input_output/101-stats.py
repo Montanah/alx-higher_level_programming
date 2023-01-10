@@ -9,7 +9,8 @@ def main():
     l_count = 0
     f_size = 0
     status = {'200': 0, '301': 0, '400': 0, '401': 0, '403': 0, '404': 0,
-            '405': 0, '500': 0}
+              '405': 0, '500': 0}
+
     try:
         for line in sys.stdin:
             input_list = line.split()
@@ -24,7 +25,8 @@ def main():
                 l_count = 0
                 print('File size: {}'.format(f_size))
                 for key in ['200', '301', '400', '401', '403', '404',
-                        '405', '500']:
+                            '405', '500']:
+
                     if status[key] != 0:
                         print('{}: {}'.format(key, status[key]))
     except KeyboardInterrupt:
