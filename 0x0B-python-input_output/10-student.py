@@ -9,7 +9,7 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
+    def to_json(self, attrs=None):
         """ä method that retrieves a dictionary
         representation of a Student instance"""
         if isinstance(attrs, list) is True:
