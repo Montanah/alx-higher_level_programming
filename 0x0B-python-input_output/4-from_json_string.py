@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Ä module that contains a json function"""
+"""A module that contains a json function"""
 
 import json
 
