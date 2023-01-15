@@ -11,8 +11,8 @@ class Node:
 
     @property
     def data(self):
-       """method that returns the data of a node"""
-       return self.__data
+        """method that returns the data of a node"""
+        return self.__data
 
     @data.setter
     def data(self, value):
@@ -36,6 +36,7 @@ class Node:
         else:
             self.__next_node = value
 
+
 class SinglyLinkedList:
     """a singly linked list"""
     def __init__(self):
@@ -56,6 +57,7 @@ class SinglyLinkedList:
 
             tmp = ptr.next_node
             ptr.next_node = Node(value, tmp)
+
     def __str__(self):
         """the printable representation of the linked list"""
         ptr = self.__head
