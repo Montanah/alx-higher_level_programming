@@ -13,6 +13,7 @@ def setUpStdout():
     sys.stdout = TextIOWrapper(BytesIO(), sys.stdout.encoding)
     return old_stdout
 
+
 def tearDownStdout(old_stdout):
     ''' function to reset stdout after check '''
     sys.stdout.seek(0)
@@ -58,7 +59,7 @@ class Test_Square(unittest.TestCase):
         f = Square(2, 4, 5)
         f.display()
         self.assertEqual(tearDownStdout(old_stdout),
-                '\n\n\n\n\n    ##\n    ##\n')
+                         '\n\n\n\n\n    ##\n    ##\n')
 
     def test_print(self):
         ''' tests __str__/print '''
@@ -66,7 +67,7 @@ class Test_Square(unittest.TestCase):
         g = Square(1, 2, 3, 4)
         print(g)
         self.assertEqual(tearDownStdout(old_stdout),
-                '[Square] (4) 2/3 - 1\n')
+                         '[Square] (4) 2/3 - 1\n')
 
     def test_args_update(self):
         ''' tests update method with *args '''
@@ -96,7 +97,7 @@ class Test_Square(unittest.TestCase):
         ''' tests dictionary method '''
         h = Square(10, 2, 1, 5)
         self.assertEqual(h.to_dictionary(),
-                {'id': 5, 'x': 2, 'size': 10, 'y': 1})
+                         {'id': 5, 'x': 2, 'size': 10, 'y': 1})
 
 
 class Test_JSON(unittest.TestCase):

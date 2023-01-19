@@ -13,7 +13,7 @@ class Base:
         """initializer for base class, sets instance id"""
         try:
             hash(id)
-        except:
+        except Exception:
             raise TypeError('id must be immutable')
         if id is not None:
             self.id = id
@@ -66,7 +66,7 @@ class Base:
             for item in list_dicts:
                 new.append(cls.create(**item))
             return new
-        except:
+        except Exception:
             return new
 
     @staticmethod
@@ -119,5 +119,5 @@ class Base:
             for item in my_list:
                 new.append(cls.create(**item))
             return new
-        except:
+        except Exception:
             return new

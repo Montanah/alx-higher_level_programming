@@ -59,5 +59,6 @@ class Test_JSON(unittest.TestCase):
         f = Base.from_json_string('[{ "id": 89 }]')
         self.assertEqual(f, [{'id': 89}])
 
+
 if __name__ == '__main__':
-        unitest.main()
+    unitest.main()

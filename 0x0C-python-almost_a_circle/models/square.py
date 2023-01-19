@@ -13,7 +13,7 @@ class Square(Rectangle):
     def __str__(self):
         """printable version of an instance"""
         return '[Square] ({}) {}/{} - {}'.format(self.id, self.x, self.y,
-                self.width)
+                                                 self.width)
 
     @property
     def size(self):
@@ -43,8 +43,9 @@ class Square(Rectangle):
                 self.size = args[1]
                 self.x = args[2]
                 self.y = args[3]
-            except:
+            except Exception:
                 pass
+
     def to_dictionary(self):
         """dict version of a square"""
         my_dict = super().to_dictionary()

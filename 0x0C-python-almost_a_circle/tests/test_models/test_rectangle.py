@@ -36,7 +36,6 @@ class Test_Rect(unittest.TestCase):
         self.assertEqual(a.y, 4)
         self.assertEqual(a.id, 5)
 
-
     def test_bad_type_width(self):
         ''' tests wrong type input width '''
         with self.assertRaises(TypeError):
@@ -143,7 +142,6 @@ class Test_Rect(unittest.TestCase):
 
 class Test_JSON(unittest.TestCase):
     ''' tests to make sure json methods work with rectangle '''
-    
     def test_json(self):
         ''' tests json methods '''
         a = Rectangle(10, 7, 2, 8, 3)
@@ -185,7 +183,6 @@ class Test_JSON(unittest.TestCase):
 
 class Test_CSV(unittest.TestCase):
     ''' tests to make sure csv methods work with square '''
-    
     def test_csv(self):
         ''' tests csv methods '''
         a = Rectangle(1, 2, 3, 4, 5)

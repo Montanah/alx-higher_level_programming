@@ -17,7 +17,7 @@ class Rectangle(Base):
     def __str__(self):
         """printable string of rectangle"""
         return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.x, self.y,
-                self.width, self.height)
+                                                       self.width, self.height)
 
     @property
     def width(self):
@@ -86,7 +86,7 @@ class Rectangle(Base):
         if self.area == 0:
             return
         print('\n' * self.y +
-                (' ' * self.x + '#' * self.width + '\n') * self.height, end='')
+              (' ' * self.x + '#' * self.width + '\n') * self.height, end='')
 
     def update(self, *args, **kwargs):
         """updates a rectangle with a dict's values"""
@@ -108,7 +108,7 @@ class Rectangle(Base):
                 self.height = args[2]
                 self.x = args[3]
                 self.y = args[4]
-            except:
+            except Exception:
                 pass
 
     def to_dictionary(self):
