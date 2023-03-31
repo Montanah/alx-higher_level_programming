@@ -1,15 +1,14 @@
 #!/usr/bin/python3
-'''
-fetches a webpage
-'''
+'''fetches a webpage'''
 
-from urllib.request import urlopen
+from urllib import request
 
 
 if __name__ == "__main__":
-        with urlopen('https://intranet.hbtn.io/status') as response:
-                message = response.read()
-                print("Body response:")
-                print('\t- type: {}'.format(message.__class__))
-                print('\t- content: {}'.format(message))
-                print('\t- utf8 content: {}'.format(message.decode('utf-8')))
+    req = request.Request('https://intranet.hbtn.io/status')
+    with request.urlopen(req) as response:
+        body = response.read()
+        print("Body response:")
+        print("\t- type: {}".format(type(body)))
+        print("\t- contebt: {}".format(body))
+        print("\t- utf8 content: {}".format(body.decode('utf-8')))
