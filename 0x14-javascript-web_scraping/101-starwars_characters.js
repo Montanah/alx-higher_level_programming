@@ -4,7 +4,7 @@ const request = require('request');
 
 const url = 'https://swapi-api.alx-tools.com/api/films/';
 
-function getCharacterName(characterUrl) {
+function getCharacterName (characterUrl) {
   return new Promise((resolve, reject) => {
     request(characterUrl, function (error, response, body) {
       if (error) {
@@ -17,7 +17,7 @@ function getCharacterName(characterUrl) {
   });
 }
 
-async function getFilmCharacters(filmId) {
+async function getFilmCharacters (filmId) {
   try {
     const filmUrl = url + filmId + '/.json';
     const filmResponse = await new Promise((resolve, reject) => {
@@ -42,4 +42,3 @@ async function getFilmCharacters(filmId) {
 
 const filmId = process.argv[2];
 getFilmCharacters(filmId);
-
