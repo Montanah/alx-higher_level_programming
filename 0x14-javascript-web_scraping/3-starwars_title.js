@@ -2,7 +2,7 @@
 
 const request = require('request');
 
-const url = 'https://swapi.com/api/films/';
+const url = 'https://swapi.co/api/films/';
 
 request(url + process.argv[2], function(err, response, body) {
   if (err) {
