@@ -8,6 +8,6 @@ request.get(url, (error, response) => {
   if (error) {
     console.error('Error', error);
   } else {
-    console.response('code: ', response.statuscode);
+    console.log('code: ', response.statuscode);
   }
 });
