@@ -2,13 +2,12 @@
 
 const request = require('request');
 
-const url = 'http://swapi.co/api/films/';
+const url = 'https://swapi-api.alx-tools.com/api/films/:id';
 
-request(url + process.argv[2], function(err, response, body) {
+request(url + process.argv[2], function (err, response, body) {
   if (err) {
-   console.log(err);
-   return;
+    console.log(err);
   } else {
-  console.log(JSON.parse(body).title);
+    console.log(JSON.parse(body).title);
   }
 });
